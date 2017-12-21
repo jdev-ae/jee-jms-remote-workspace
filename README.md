@@ -8,6 +8,7 @@ We need to setup server
 2. Extract to some directory for example **C:\dev\apache-activemq-5.15.2**
 3. Set environment variable **ACTIVEMQ_HOME** with above path
 4. Start server in cmd **%ACTIVEMQ_HOME%/bin/activemq start** in windows
+
 **Sample console log**
 ```
 C:\dev\apache-activemq-5.15.2\bin>activemq start
