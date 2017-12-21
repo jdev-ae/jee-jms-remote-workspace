@@ -10,7 +10,7 @@ We need to setup server
 4. Start server in cmd **%ACTIVEMQ_HOME%/bin/activemq start** in windows
 
 **Sample console log**
-```
+```bat
 C:\dev\apache-activemq-5.15.2\bin>activemq start
 Java Runtime: Oracle Corporation 1.8.0_144 C:\Program Files\Java\jdk1.8.0_144\jre
   Heap sizes: current=1005056k  free=989327k  max=1005056k
@@ -40,7 +40,7 @@ Loading message broker from: xbean:activemq.xml
 ```
 2. Add JNDI configuration in ```jndi.properties``` file in ```src/main/resources``` directory
 
-```
+```yaml 
 java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory
 java.naming.provider.url=tcp://hostname:61616
 java.naming.security.principal=admin
