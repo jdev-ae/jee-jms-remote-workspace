@@ -28,3 +28,24 @@ Loading message broker from: xbean:activemq.xml
 5. For ActiveMQ admin console goto http://localhost:8161
     + user name : **admin** 
     + password: **admin**
+
+## JNDI Support for ActiveMQ
+
+1. Update ```<broker>``` tag in **%ACTIVEMQ_HOME%/conf/activemq.xml** as follows
+
+```xml
+<destinations>
+    <queue name="EM_CRYPTO_TRADE.Q" physicalName="EM_CRYPTO_TRADE.Q" />
+</destinations>
+```
+2. Add JNDI configuration in ```jndi.properties``` file in ```src/main/resources``` directory
+
+```
+java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory
+java.naming.provider.url=tcp://hostname:61616
+java.naming.security.principal=admin
+java.naming.security.credentials=admin
+
+connectionFactoryNames=ConnectionFactory
+queue.EM_CRYPTO_TRADE.Q=EM_CRYPTO_TRADE.Q
+```
