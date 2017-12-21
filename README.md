@@ -40,7 +40,7 @@ Loading message broker from: xbean:activemq.xml
 ```
 2. Add JNDI configuration in ```jndi.properties``` file in ```src/main/resources``` directory
 
-```yaml 
+```ini 
 java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory
 java.naming.provider.url=tcp://hostname:61616
 java.naming.security.principal=admin
