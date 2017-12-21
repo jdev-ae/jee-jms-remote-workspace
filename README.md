@@ -4,7 +4,7 @@
 
 We need to setup server
 
-1. Download ActiveMQ 
+1. Download ActiveMQ from [http://activemq.apache.org/download.html][1]
 2. Extract to some directory for example **C:\dev\apache-activemq-5.15.2**
 3. Set environment variable **ACTIVEMQ_HOME** with above path
 4. Start server in cmd **%ACTIVEMQ_HOME%/bin/activemq start** in windows
@@ -25,3 +25,8 @@ Loading message broker from: xbean:activemq.xml
  INFO | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@6500df86: startup date [Wed Dec 20 21:26:57 CST 2017]; root of context hierarchy
  INFO | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\dev\apache-activemq-5.15.2\data\kahadb]
 ```
+5. For ActiveMQ admin console goto http://localhost:8161
+> user name: admin
+> password: admin
+
+[1]: http://activemq.apache.org/download.html
