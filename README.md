@@ -4,7 +4,7 @@
 
 We need to setup server
 
-1. Download ActiveMQ from [http://activemq.apache.org/download.html][1]
+1. Download ActiveMQ from **http://activemq.apache.org/download.html**
 2. Extract to some directory for example **C:\dev\apache-activemq-5.15.2**
 3. Set environment variable **ACTIVEMQ_HOME** with above path
 4. Start server in cmd **%ACTIVEMQ_HOME%/bin/activemq start** in windows
@@ -28,5 +28,3 @@ Loading message broker from: xbean:activemq.xml
 5. For ActiveMQ admin console goto http://localhost:8161
     + user name : **admin** 
     + password: **admin**
-
-[1]: http://activemq.apache.org/download.html
