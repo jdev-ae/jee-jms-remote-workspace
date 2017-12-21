@@ -26,8 +26,7 @@ Loading message broker from: xbean:activemq.xml
  INFO | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\dev\apache-activemq-5.15.2\data\kahadb]
 ```
 5. For ActiveMQ admin console goto http://localhost:8161
-> user name: **admin**
-
-> password: **admin**
+    + user name : **admin** 
+    + password: **admin**
 
 [1]: http://activemq.apache.org/download.html
