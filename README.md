@@ -1,4 +1,4 @@
-# jee-jms-remote-workspace
+# JMS ActiveMQ Setup
 
 ### Before running ActiveMQ applications
 
