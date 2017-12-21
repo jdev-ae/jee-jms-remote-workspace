@@ -8,7 +8,8 @@ We need to setup server
 2. Extract to some directory for example **C:\dev\apache-activemq-5.15.2**
 3. Set environment variable **ACTIVEMQ_HOME** with above path
 4. Start server in cmd **%ACTIVEMQ_HOME%/bin/activemq start** in windows
-```{r, engine='bash', count_lines}
+**Sample console log**
+```
 C:\dev\apache-activemq-5.15.2\bin>activemq start
 Java Runtime: Oracle Corporation 1.8.0_144 C:\Program Files\Java\jdk1.8.0_144\jre
   Heap sizes: current=1005056k  free=989327k  max=1005056k
