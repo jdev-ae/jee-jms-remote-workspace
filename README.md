@@ -42,10 +42,87 @@ Loading message broker from: xbean:activemq.xml
 
 ```ini 
 java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory
-java.naming.provider.url=tcp://hostname:61616
+java.naming.provider.url=tcp://localhost:61616
 java.naming.security.principal=admin
 java.naming.security.credentials=admin
 
 connectionFactoryNames=ConnectionFactory
 queue.EM_CRYPTO_TRADE.Q=EM_CRYPTO_TRADE.Q
+```
+
+# JMS OpenMQ Setup
+We need to setup server
+OpenMQ 5.0 supports JMS 2.0 and requires java 1.7
+
+1. Download OpenMQ from **http://mq.java.net**
+2. Extract to some directory for example **C:\dev\openmq**
+3. Set environment variable **IMQ_HOME** with above path
+4. ```openmq``` directory contents
+    + **bin** (all executables)
+    + **etc** (root configuration)
+    + **lib** (jar files)
+    + **examples** (sample codes)
+    + **var** (broker instances and configuration)
+    + **legal** (legal and licencing information)
+5. Basic configuration
+    + Default properties file ```%IMQ_HOME%\lib\props\broker\default.properties```
+    + Per instance configuration file ```%IMQ_HOME%\var\<broker_name>\config.properties```
+    + Total 468 properties that can be set
+6. Sample configuration
+    ```ini
+    imq.portmapper.port=7676
+    imq.persist.store=file
+    img.message.max_size=70m
+    ```
+7. To start server
+    start ```%IMQ_HOME%\bin\imqbrokerd.exe``` in windows
+    Optional startup configuration as follows
+    ```bat
+    imgbrokerd -name mqbroker1 -port 7676 -javahome "<java1.7>" -bgnd
+    ```
+**Sample console log**
+ ```bat
+C:\dev\openmq\bin>imgbrokerd
+'imgbrokerd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\dev\openmq\bin>imqbrokerd
+Dec 27, 2017 12:14:00 PM com.sun.messaging.jmq.util.log.Logger publish
+INFO: [B1002]: An existing property file for imqbroker was not found, no stored properties will be loaded
+
+[#|2017-12-27T12:14:00.726-0600|WARNING|5.1.1|imq.log.Logger|_ThreadID=1;_ThreadName=main;|[S2004]: Log output channel com.sun.messaging.jmq.util.log.SysLogHandler is disabled: no imqutil in java.library.path|#]
+
+
+[#|2017-12-27T12:14:00.742-0600|FORCE|5.1.1|imq.log.Logger|_ThreadID=1;_ThreadName=main;|
+================================================================================
+Message Queue 5.1.1
+Oracle
+Version:  5.1.1  (Build 6-a)
+Compile:  August 17 2017 1649
+
+Copyright (c) 2013, Oracle and/or its affiliates.  All rights reserved.
+================================================================================
+Java Runtime: 1.8.0_144 Oracle Corporation C:\Program Files\Java\jdk1.8.0_144\jre
+|#]
+
+```
+**List all destinations**
+```bat
+C:\dev\openmq\bin>imqcmd list dst
+Username: admin
+Password: <admin>
+Listing all the destinations on the broker specified by:
+
+-------------------------
+Host         Primary Port
+-------------------------
+localhost    7676
+
+-----------------------------------------------------------------------------------------------------
+   Name     Type    State      Producers        Consumers                      Msgs
+                            Total  Wildcard  Total  Wildcard  Count  Remote  UnAck  InDelay  Avg Size
+-----------------------------------------------------------------------------------------------------
+mq.sys.dmq  Queue  RUNNING  0      -         0      -         0      0       0      0        0.0
+
+Successfully listed destinations.
 ```
