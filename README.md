@@ -51,6 +51,8 @@ queue.EM_CRYPTO_TRADE.Q=EM_CRYPTO_TRADE.Q
 ```
 
 # JMS OpenMQ Setup
+### Before running OpenMQ applications
+
 We need to setup server
 OpenMQ 5.0 supports JMS 2.0 and requires java 1.7
 
@@ -82,10 +84,6 @@ OpenMQ 5.0 supports JMS 2.0 and requires java 1.7
     ```
 **Sample console log**
  ```bat
-C:\dev\openmq\bin>imgbrokerd
-'imgbrokerd' is not recognized as an internal or external command,
-operable program or batch file.
-
 C:\dev\openmq\bin>imqbrokerd
 Dec 27, 2017 12:14:00 PM com.sun.messaging.jmq.util.log.Logger publish
 INFO: [B1002]: An existing property file for imqbroker was not found, no stored properties will be loaded

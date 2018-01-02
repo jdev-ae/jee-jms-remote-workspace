@@ -5,25 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.suru.jmstest</groupId>
-    <artifactId>jms-2-example</artifactId>
+    <artifactId>jms-2-shared-subscriptions</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
-    <!--<dependencies>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.mq/imq &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.glassfish.mq</groupId>-->
-            <!--<artifactId>imq</artifactId>-->
-            <!--<version>4.5.2</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.jms/javax.jms-api &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>javax.jms</groupId>-->
-            <!--<artifactId>javax.jms-api</artifactId>-->
-            <!--<version>2.0</version>-->
-        <!--</dependency>-->
-
-    <!--</dependencies>-->
 
     <build>
         <plugins>
@@ -37,4 +20,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
